@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+    "use strict";
+
+    function fDifi() {
+
+      var vgA;
+      var vgB;
+      var va;
+      var vb;
+      var vKA;
+      var vKB
+      var vg;
+      var vp;
+
+      vg = document.getElementById ("idg).value;")
+      vg = parseFloat(vg);
+
+      vp = document.getElementById ("idp).value;")
+      vp = parseFloat(vp);
+
+      va = document.getElementById ("ida).value;")
+      va = parseFloat(va);
+
+      vb = document.getElementById ("idb).value;")
+      vb = parseFloat(vb);
+
+      vgA = Math.pow(vg, va) % vp;
+      vgB = Math.pow(vg, vb) % vp;
+      vKB = Math.pow(vgB, va) % vp;
+      vKA = Math.pow(vgA, vb) % vp; 
+
+      document.getElementById("idgA").innerHTML = vgA;
+      document.getElementById("idgB").innerHTML = vgB;
+      document.getElementById("idgA").innerHTML = vKA;
+      document.getElementById("idgB").innerHTML = vKB;
+
+
+
+      }
+    </script>
+    <title>Temperaturumrechner</title>
+  </head><br>
+
+
+
+
+
+ <body>
+    <h1>Berechnung vom Schlüssel K nach Diffie-Hellman</h1>
+  <br> 1. Alice und Bob einigen sich auf: <br>
+    g = <input id="idg" type="text" value="" />
+
+    <br> p = <input id="idp" type="text" value="" />   <br>
+
+ <br> ------------------------------------------------------------------------ <br>
+
+<br> 2. Alice wählt die Geheime Zahl a: <br>
+  g = <input id="ida" type="text" value="" />
+
+<br> 3. Bob wählt die Geheime Zahl b:
+
+<br>  g = <input id="idb" type="text" value="" /> <br>
+
+
+<button onClick="fDifi();">Berechnen K</button><br /><br>
+
+<div id="idgA"></div>
+
+
+
+
+
+  </body>
+</html>
